@@ -32,7 +32,14 @@ const lastTeacher = popTeacher;
 console.log(lastTeacher);
 
 // 4. Rimuovi il primo insegnante dall'array e salvalo nella variabile firstTeacher qui sotto
-const firstTeacher = null;
+
+let shiftTeacher = teachers.shift();
+
+console.log(teachers);
+
+const firstTeacher = shiftTeacher;
+
+console.log(firstTeacher);
 
 // 5. Aggiungi un insegnante di nome 'Vanessa' alla fine dell'array teachers
 
