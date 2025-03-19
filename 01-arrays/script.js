@@ -25,6 +25,8 @@ console.log(teachers);
 
 let popTeacher = teachers.pop();
 
+console.log(teachers);
+
 const lastTeacher = popTeacher;
 
 console.log(lastTeacher);
