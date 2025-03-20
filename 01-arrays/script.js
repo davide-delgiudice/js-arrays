@@ -11,33 +11,25 @@ const teachers = [
 // 1. Utilizzando un indice sull'array teachers, cambia il valore della
 // variabile fourthTeacher qui sotto in modo che sia il quarto insegnante elencato nell'array
 
-const fourthTeacher = teachers.indexOf('Phil', 0);
+const fourthTeacher = teachers[3];
 
 console.log(fourthTeacher);
 
 // 2. Sostituisci il quinto insegnante nell'array teachers con 'Patrick'
 
-teachers.splice(4, 1, 'Patrick');
+teachers[4] = "Patrick";
 
 console.log(teachers);
 
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
 
-let popTeacher = teachers.pop();
-
-console.log(teachers);
-
-const lastTeacher = popTeacher;
+const lastTeacher = teachers.pop();
 
 console.log(lastTeacher);
 
 // 4. Rimuovi il primo insegnante dall'array e salvalo nella variabile firstTeacher qui sotto
 
-let shiftTeacher = teachers.shift();
-
-console.log(teachers);
-
-const firstTeacher = shiftTeacher;
+const firstTeacher = teachers.shift();
 
 console.log(firstTeacher);
 
@@ -56,7 +48,13 @@ console.log(teachers);
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
 
-let index = teachers.indexOf('Lewis', 0);
+let index;
+
+for(let i=0; i<teachers.length; i++){
+  if(teachers[i] === 'Lewis'){
+    index = i;
+  }
+}
 
 const lewisIndex = index;
 
@@ -69,9 +67,6 @@ let bool = true;
 
 if (teachers.length != 0) {
   bool = false;
-}
-else {
-
 }
 
 const isTeachersEmpty = bool;
